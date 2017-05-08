@@ -203,6 +203,21 @@ input {
   height: 89%;
 }
 
+.logosize {
+  width: 300px;
+}
+
+fieldset {
+  border: none;
+  width: 100px;
+  position:absolute;
+  margin-left: 0px;
+  bottom:0px;
+  left:5%;
+  min-width: 300px;
+  max-width: 300px;
+}
+
 .cadastro {
   margin: auto;
 }
@@ -212,32 +227,27 @@ input {
 }
 
 .telefone2 {
-  width: 387px;
+  width: 200px;
 }
 
-.cpf {
-  width: 386px;
+.ddd {
+  width: 90px;
 }
 
 .telefone {
-  width: 279px;
+  width: 200px;
+}
+
+.cpf {
+  width: 100%;
 }
 
 .singin {
   width: 75px;
-  margin-left: 125px;
 }
 
 .interna {
   width: 300px;
-}
-
-.ddd2 {
-  width: 80px;
-}
-
-.telefone2 {
-  width: 278px;
 }
 
 .cpf2, .Email, .Nome {
