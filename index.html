@@ -2,31 +2,42 @@
 <html>
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
   <link href="css/style.css" rel="stylesheet" type="text/css">
 </head>
   <body>
 
-        <form class="form" method="post">
+        <form action="#0">
+          <p><img class="logosize" src="img/logo.png"></p>
 
-          <fieldset>
+  <div>
+    <input type="text" id="cpf" name="cpf" required placeholder=" " pattern="\d{1,}"/>
+    <label for="cpf">CPF (somente números)</label>
+    <div class="requirements">
+      Insira um CPF válido.
+    </div>
+  </div>
 
-            <p><img class="logosize" src="img/logo.png"></p>
-            <p><input class="cpf" type="text" value="CPF" placeholder="CPF" pattern="\d{1,}"
-              oninvalid="setCustomValidity('Por favor, preencha CPF válido')"></p>
-            <p>
-              <div class="flexData">
-                <input class="ddd" type="text" value="DDD" placeholder="DDD" pattern="\d{2,3}"
-                oninvalid="setCustomValidity('Por favor, preencha DDD válido')">
-            <input class="telefone" type="text" value="Celular" placeholder="Celular" pattern="\d{8,9}"
-            oninvalid="setCustomValidity('Por favor, preencha um número de celular válido')"></div></p>
-            <p><div class="flexData">
-              <a href="cadastro.html">Crie sua conta</a>
-           <input class="singin" type="submit" value="Entrar">
-          </div></p>
+  <div>
+    <input type="text" id="ddd" name="ddd" required placeholder=" " pattern="\d{2,3}"/>
+    <label for="ddd">DDD</label>
+    <div class="requirements">
+      Insira um DDD válido.
+    </div>
+  </div>
 
-          </fieldset>
+  <div>
+    <input type="text" id="celular" name="celular" required placeholder=" " pattern="\d{8,9}"/>
+    <label for="celular">Celular</label>
+    <div class="requirements">
+      Insira um número de celular válido.
+    </div>
+  </div>
 
-        </form>
+
+  <a href="cadastro.html"><input type="button" value="Criar sua conta" /></a><input type="submit" value="Entrar" />
+
+</form>
 <script src="js/validatecpf.js"></script>
 </body>
 <html>

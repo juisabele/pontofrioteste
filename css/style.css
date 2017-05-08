@@ -1,3 +1,6 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700,900|Montserrat:400,700,900|Open+Sans:400,700,900|Raleway:400,700,900);
+@import url(http://netdna.bootstrapcdn.com/font-awesome/3.2.0/css/font-awesome.min.css);
+
 body {
   background: url("../img/bg.png") no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -5,353 +8,232 @@ body {
   -o-background-size: cover;
   background-size: cover;
   font-family: 'Open Sans', sans-serif;
-  color: #fff;
+  color: #000;
 }
 
-::-webkit-input-placeholder { /* WebKit, Blink, Edge */
-    color:    #fff;
-}
-:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-   color:    #fff;
-   opacity:  1;
-}
-::-moz-placeholder { /* Mozilla Firefox 19+ */
-   color:    #fff;
-   opacity:  1;
-}
-:-ms-input-placeholder { /* Internet Explorer 10-11 */
-   color:    #fff;
-}
-
-.card{
-  border: 10px solid #fff;
-  border-radius: 4px;
-}
-
-#cupom{
+#cupom {
   margin: 0 auto;
-  margin-top: 2%;
   width: 90%;
-  height: 90%;
+  height: 100%;
+  border: 5px solid #fff;
+}
+
+input[type="text"],textarea[type="text"]::-webkit-input-placeholder {
+    color: white;
+    font-size: 16px;
+}
+input[type="text"],textarea[type="text"]:-moz-placeholder {
+    color: white;
+    font-size: 16px;
+}
+input[type="text"],textarea[type="text"]:-ms-input-placeholder {
+    color: white;
+    font-size: 16px;
+}
+
+input[type="email"],textarea[type="email"]::-webkit-input-placeholder {
+    color: white;
+    font-size: 16px;
+}
+input[type="email"],textarea[type="email"]:-moz-placeholder {
+    color: white;
+    font-size: 16px;
+}
+input[type="email"],textarea[type="email"]:-ms-input-placeholder {
+    color: white;
+    font-size: 16px;
+}
+input[type="date"],textarea[type="date"]::-webkit-input-placeholder {
+    color: white;
+    font-size: 16px;
+}
+input[type="date"],textarea[type="date"]:-moz-placeholder {
+    color: white;
+    font-size: 16px;
+}
+input[type="date"],textarea[type="date"]:-ms-input-placeholder {
+    color: white;
+    font-size: 16px;
 }
 
 .logosize {
-  width: 490px;
+  max-width: 490px;
 }
 
-.lead {
-  font-size: 150%;
+form {
   position: absolute;
+  max-width: 490px;
+  margin: 0 auto;
+  bottom: 0;
+  left: 50%;
+  margin-left: -250px;
 }
 
-.seta-criar {
-  margin-right:5px;
+form > div {
+  position: relative;
+  border-bottom: 1px solid #ccc;
 }
-
-.cadastro {
-  position: absolute;
-  padding-top: 14%;
-  padding-left: 35%;
-  width: 35vw;
-}
-
-.login {
-  position: absolute;
-  width: 90vw;
-  height: 50px;
-}
-
-.interna {
-  height: 300px;
-  border: none;
-  background-color: #367ABD;
-  border-radius: 15px;
-}
-
-a {
-  font-size: 150%;
+form > div > label {
   color: #fff;
-  text-decoration: none;
-}
-
-fieldset {
-  border: none;
-  width: 490px;
-  position:absolute;
-  margin-left:-245px;
-  bottom:0px;
-  left:50%;
-}
-
-input {
-  height: 25px;
-  background: transparent;
-  border-top: none;
-  border-right: none;
-  border-left: none;
-  border-bottom: 1px solid #fff;
-  font-size: 150%;
-  color: #fff;
-  outline: none;
-  border-bottom: 1px solid #fff;
-}
-
-.inputtoken {
-  border: 1px solid #367ABD;
-  border-radius: 15px;
-  padding: 10px;
-  background-color: #367ABD;
-  height: 70px;
-  width: 420px;
-  width: 35vw;
-}
-
-.cadastrotoken {
   position: absolute;
-  padding-top: 14%;
-  padding-left: 35%;
+  top: 22px;
+  left: 20px;
 }
 
-.cpf {
+form > div > input[type="date"] {
+  padding: 20px 20px 20px 20px !important;
+}
+
+form > div > input[type="text"],
+form > div > input[type="email"],
+form > div > input[type="date"] {
   width: 100%;
-}
-
-.ddd {
-  width: 80px;
-}
-
-.ddd2 {
-  height: 25px;
-  width: 160px;
+  border: 0;
+  padding: 20px 20px 20px 50px;
   background: transparent;
-  border-top: none;
-  border-right: none;
-  border-left: none;
-  border-bottom: 1px solid #fff;
-  font-size: 150%;
-  color: #fff;
 }
 
-.telefone2 {
-  width: 320px;
+form > div > input[type="text"]:focus,
+form > div > input[type="email"]:focus,
+form > div > input[type="date"]:focus {
+  outline: 0;
+}
+form > div > input[type="text"]:focus + label,
+form > div > input[type="email"]:focus + label
+form > div > input[type="date"]:focus + label{
+  opacity: 0;
 }
 
-.cpf2, .Email, .Nome {
-  width: 100%;
+form > div > input[type="text"]:valid + label,
+form > div > input[type="email"]:valid + label,
+form > div > input[type="date"]:valid + label {
+  opacity: 0;
+}
+form > div > input[type="text"]:invalid:not(:focus):not(:placeholder-shown),
+form > div > input[type="email"]:invalid:not(:focus):not(:placeholder-shown){
+  background: pink;
+}
+form > div > input[type="text"]:invalid:not(:focus):not(:placeholder-shown) + label,
+form > div > input[type="email"]:invalid:not(:focus):not(:placeholder-shown) + label{
+  opacity: 0;
+}
+form > div > input[type="text"]:invalid:focus:not(:placeholder-shown) ~ .requirements,
+form > div > input[type="email"]:invalid:focus:not(:placeholder-shown) ~ .requirements{
+  max-height: 200px;
+  padding: 0 30px 20px 50px;
+}
+form > div .requirements {
+  padding: 0 30px 0 50px;
+  color: #999;
+  max-height: 0;
+  -webkit-transition: 0.28s;
+  transition: 0.28s;
+  overflow: hidden;
+  color: red;
+  font-style: italic;
+}
+form input[type="submit"] {
+  width: 45%;
+  margin: 20px 10px;
+  color: white;
+  border: 0;
+  padding: 20px;
+  font-size: 1.2rem;
+  background: transparent !important;
 }
 
-.Barra {
-  font-size: 150%;
+form input[type="button"] {
+  width: 45%;
+  margin: 20px 10px;
+  color: white;
+  border: 0;
+  padding: 20px;
+  font-size: 1.2rem;
+  background: transparent !important;
 }
 
-.Data {
-  width: 33%;
-  margin-right: 0;
+.tokenbutton {
+  width: 100% !important;
+  margin-left: 0 !important;
+  background: transparent !important;
 }
 
-.flexData {
-  display: flex;
-  justify-content: space-between;
+.tokenfield {
+  background-color: #000 !important;
+  border-radius: 20px !important;
 }
 
-.create {
-  height: 35px;
-  background: transparent;
-  color: #fff;
-  font-size: 150%;
-  border: none;
+.tokendiv {
+  border-bottom: none;
 }
 
-.create:hover {
-  color: #fff;
+div .tokenfield {
+  border-bottom: 0 !important;
 }
 
-.singin {
-  height: 35px;
-  background: transparent;
-  color: #fff;
-  font-size: 150%;
-  border: none;
+* {
+  box-sizing: border-box;
 }
 
-.create:focus {
-  outline: none;
-}
-
-.singin:hover {
-  color: #fff;
-}
-
-.singin:focus {
-  outline: none;
-}
-
-.cadastrotoken {
+@media (min-width: 320px) and (max-width: 360px) {
+  .logosize {
+    max-width: 200px;
+  }
+  form {
     position: absolute;
-}
-
-@media screen and (min-width : 320px) and (max-width : 480px) {
-
-  body {
-    background: url("../img/bgmobile.png") no-repeat fixed;
+    max-width: 200px;
+    margin: 0 auto;
+    bottom: 0;
+    left: 50%;
+    margin-left: -100px;
+  }
+  form input[type="submit"] {
+    height: 45px;
+    padding: 5px;
+    width: 200px;
+    margin-top: 0;
+    margin-bottom: 10px;
+    margin-left: 0;
   }
 
-#cupom{
-  margin: 10px;
-  position: absolute;
-  width: 87%;
-  height: 89%;
+  form input[type="button"] {
+    height: 45px;
+    padding: 5px;
+    width: 200px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 0;
+  }
 }
 
-.logosize {
-  width: 300px;
-}
+@media (min-width: 360px) and (max-width: 768px) {
+  .logosize {
+    max-width: 300px;
+  }
+  form {
+    position: absolute;
+    max-width: 300px;
+    margin: 0 auto;
+    bottom: 0;
+    left: 50%;
+    margin-left: -150px;
+  }
+  form input[type="submit"] {
+    width: 40%;
+    margin: 5px 5px;
+    color: white;
+    border: 0;
+    padding: 5px;
+    font-size: 1.2rem;
+  }
 
-fieldset {
-  border: none;
-  width: 100px;
-  position:absolute;
-  margin-left: 0px;
-  bottom:0px;
-  left:5%;
-  min-width: 300px;
-  max-width: 300px;
-}
-
-.cadastro {
-  margin: auto;
-}
-
-.ddd2 {
-  width: 90px;
-}
-
-.telefone2 {
-  width: 200px;
-}
-
-.ddd {
-  width: 90px;
-}
-
-.telefone {
-  width: 200px;
-}
-
-.cpf {
-  width: 100%;
-}
-
-.singin {
-  width: 75px;
-}
-
-.interna {
-  width: 300px;
-}
-
-.cpf2, .Email, .Nome {
-  width: 100%;
-}
-
-.Data {
-  width: 30%;
-}
-
-.cadastrotoken {
-    padding: 550px 10px 10px 10px;
-}
-
-.inputtoken {
-  width: 100%;
-}
-
-}
-
-@media screen and (min-width : 768px) and (max-width : 1024px) {
-
-.formcadastro {
-  margin: 360px 150px 0 150px;
-  position: absolute;
-  height: 50px;
-  width: 40vw;
-}
-
-.cadastro {
-  margin: auto;
-}
-
-.ddd2 {
-  width: 90px;
-}
-
-.telefone2 {
-  width: 366px;
-}
-
-.cpf {
-  width: 496px;
-}
-
-.telefone {
-  width: 389px;
-}
-
-.singin {
-  width: 75px;
-  margin-left: 235px;
-}
-
-.cpf2, .Email, .Nome {
-  width: 100%;
-}
-
-.Data {
-  width: 30%;
-}
-
-.cadastrotoken {
-    padding: 150px 10px 10px 180px;
-}
-
-.inputtoken {
-  width: 490px;
-}
-
-}
-
-@media screen  and (min-width : 1224px) {
-
-.formcadastro {
-  margin: 0 auto;
-  padding-top: 25%;
-  height: 50px;
-  width: 490px;
-}
-
-.cadastro {
-  margin: auto;
-}
-
-.inputtoken {
-  width: 490px;
-}
-
-.ddd2 {
-  width: 23%;
-}
-
-.telefone2 {
-  width: 75%;
-}
-
-.telefone {
-  width: 392px;
-}
-
-.singin {
-  width: 75px;
-  margin-left: 240px;
-}
+  form input[type="button"] {
+    width: 50%;
+    margin: 5px 5px;
+    color: white;
+    border: 0;
+    padding: 5px;
+    font-size: 1.2rem;
+  }
 
 }

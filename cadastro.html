@@ -6,46 +6,61 @@
   <link href="css/style.css" rel="stylesheet" type="text/css">
 </head>
   <body>
-    <form id="msform" method="post">
 
-      <fieldset>
+        <form action="#0">
+          <p><img class="logosize" src="img/logo.png"></p>
 
-        <p><img class="logosize" src="img/logo.png"></p>
-        <p><input class="Nome" type="text" placeholder="Nome Completo" pattern="[a-zA-ZáéíóúàâêôãõüçÁÉÍÓÚÀÂÊÔÃÕÜÇ]{3,}\s{1,}[a-zA-ZáéíóúàâêôãõüçÁÉÍÓÚÀÂÊÔÃÕÜÇ\s]{1,}"
-          oninvalid="setCustomValidity('Por favor, preencha seu nome e sobrenome')"><p>
-        <p><input class="Email" type="email" placeholder="Email" ></p>
-        <p>
-          <div class="flexData">
-          <input class="Data" type="text" placeholder="Dia" pattern="\d{1,}"
-          oninvalid="setCustomValidity('Por favor, preencha um dia válido')">
-          <span><i class="fa fa-close" aria-hidden="true"></i></span></input>
-          <span class="Barra">/</span>
-          <input class="Data" type="text" placeholder="Mês" pattern="\d{2}"
-          oninvalid="setCustomValidity('Por favor, preencha um mês válido')"></input>
-          <span class="Barra">/</span>
-          <input class="Data" type="text" placeholder="Ano" pattern="\d{4}"
-          oninvalid="setCustomValidity('Por favor, preencha um ano válido')"></input>
-        </div>
-        </p>
-        <p><input class="cpf2" type="text" placeholder="CPF" pattern="\d{1,}"
-          oninvalid="setCustomValidity('Por favor, preencha CPF válido')"><p>
-        <p>
-          <div class="flexData">
-            <input class="ddd2" type="text" placeholder="DDD" pattern="\d{2,3}"
-            oninvalid="setCustomValidity('Por favor, preencha DDD válido')">
-        <input class="telefone2" type="text" placeholder="Celular" pattern="\d{8,9}"
-        oninvalid="setCustomValidity('Por favor, preencha número de celular válido')">
-        </div>
-        </p>
-        <p><div class="flexData">
-          <a href="index.html">Voltar</a>
-          <input class="create" type="submit" value="Cadastrar">
-        </div>
-          <p>
+  <div>
+    <input type="text" id="nome" name="nome" required placeholder=" " pattern="[a-zA-ZáéíóúàâêôãõüçÁÉÍÓÚÀÂÊÔÃÕÜÇ]{3,}\s{1,}[a-zA-ZáéíóúàâêôãõüçÁÉÍÓÚÀÂÊÔÃÕÜÇ\s]{1,}"/>
+    <label for="nome">Nome completo</label>
+    <div class="requirements">
+      Insira seu nome completo.
+    </div>
+  </div>
 
-      </fieldset>
+  <div>
+    <input type="email" id="email" name="email" required placeholder=" " />
+    <label for="email">Email</label>
+    <div class="requirements">
+      Insira um email válido.
+    </div>
+  </div>
 
-    </form>
+  <div>
+    <input type="text" id="cpf" name="cpf" required placeholder=" " pattern="\d{1,}"/>
+    <label for="cpf">CPF (somente números)</label>
+    <div class="requirements">
+      Insira um CPF válido.
+    </div>
+  </div>
+
+  <div>
+    <input type="text" id="ddd" name="ddd" required placeholder=" " pattern="\d{2,3}"/>
+    <label for="ddd">DDD</label>
+    <div class="requirements">
+      Insira um DDD válido.
+    </div>
+  </div>
+
+  <div>
+    <input type="text" id="celular" name="celular" required placeholder=" " pattern="\d{8,9}"/>
+    <label for="celular">Celular</label>
+    <div class="requirements">
+      Insira um número de celular válido.
+    </div>
+  </div>
+
+  <div>
+    <input type="date" id="data" name="data" required placeholder=" " />
+    <label for="data"></label>
+    <div class="requirements">
+      Insira uma data de nascimento válida.
+    </div>
+  </div>
+
+  <a href="index.html"><input type="button" value="Voltar" /></a><input type="submit" value="Cadastrar" />
+
+</form>
 <script src="js/validatecpf.js"></script>
 </body>
 <html>

@@ -5,19 +5,19 @@
 </head>
 <body>
 
-      <form method="post">
+      <form>
 
-        <fieldset>
 
           <p><img class="logosize" src="img/logo.png"></p>
-          <p><input class="inputtoken" type="text" placeholder="Informe seu código SMS" pattern="\d{4,6}"><p>
-          <p>
-            <div class="flexData">
-              <input class="create" type="submit" value="Validar">
-          <input class="create" type="submit" value="Reenviar">
-          </div><p>
+          <div class="tokendiv">
+            <input class="tokenfield" type="text" id="token" name="token" required placeholder=" " pattern="\d{4,6}"/>
+            <label for="token">Token</label>
+            <div class="requirements">
+              Insira um token válido.
+            </div>
+          </div>
+              <input class="tokenbutton" type="submit" value="Validar" />
 
-        </fieldset>
 
       </form>
 
