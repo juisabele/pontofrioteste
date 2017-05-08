@@ -1,0 +1,347 @@
+body {
+  background: url("../img/bg.png") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  font-family: 'Open Sans', sans-serif;
+  color: #fff;
+}
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    #fff;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    #fff;
+   opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    #fff;
+   opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color:    #fff;
+}
+
+.card{
+  border: 10px solid #fff;
+  border-radius: 4px;
+}
+
+#cupom{
+  margin: 0 auto;
+  margin-top: 2%;
+  width: 90%;
+  height: 90%;
+}
+
+.logosize {
+  width: 490px;
+}
+
+.lead {
+  font-size: 150%;
+  position: absolute;
+}
+
+.seta-criar {
+  margin-right:5px;
+}
+
+.cadastro {
+  position: absolute;
+  padding-top: 14%;
+  padding-left: 35%;
+  width: 35vw;
+}
+
+.login {
+  position: absolute;
+  width: 90vw;
+  height: 50px;
+}
+
+.interna {
+  height: 300px;
+  border: none;
+  background-color: #367ABD;
+  border-radius: 15px;
+}
+
+a {
+  font-size: 150%;
+  color: #fff;
+  text-decoration: none;
+}
+
+fieldset {
+  border: none;
+  width: 490px;
+  position:absolute;
+  margin-left:-245px;
+  bottom:0px;
+  left:50%;
+}
+
+input {
+  height: 25px;
+  background: transparent;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: 1px solid #fff;
+  font-size: 150%;
+  color: #fff;
+  outline: none;
+  border-bottom: 1px solid #fff;
+}
+
+.inputtoken {
+  border: 1px solid #367ABD;
+  border-radius: 15px;
+  padding: 10px;
+  background-color: #367ABD;
+  height: 70px;
+  width: 420px;
+  width: 35vw;
+}
+
+.cadastrotoken {
+  position: absolute;
+  padding-top: 14%;
+  padding-left: 35%;
+}
+
+.cpf {
+  width: 100%;
+}
+
+.ddd {
+  width: 80px;
+}
+
+.ddd2 {
+  height: 25px;
+  width: 160px;
+  background: transparent;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: 1px solid #fff;
+  font-size: 150%;
+  color: #fff;
+}
+
+.telefone2 {
+  width: 320px;
+}
+
+.cpf2, .Email, .Nome {
+  width: 100%;
+}
+
+.Barra {
+  font-size: 150%;
+}
+
+.Data {
+  width: 33%;
+  margin-right: 0;
+}
+
+.flexData {
+  display: flex;
+  justify-content: space-between;
+}
+
+.create {
+  height: 35px;
+  background: transparent;
+  color: #fff;
+  font-size: 150%;
+  border: none;
+}
+
+.create:hover {
+  color: #fff;
+}
+
+.singin {
+  height: 35px;
+  background: transparent;
+  color: #fff;
+  font-size: 150%;
+  border: none;
+}
+
+.create:focus {
+  outline: none;
+}
+
+.singin:hover {
+  color: #fff;
+}
+
+.singin:focus {
+  outline: none;
+}
+
+.cadastrotoken {
+    position: absolute;
+}
+
+@media screen and (min-width : 320px) and (max-width : 480px) {
+
+  body {
+    background: url("../img/bgmobile.png") no-repeat fixed;
+  }
+
+#cupom{
+  margin: 10px;
+  position: absolute;
+  width: 87%;
+  height: 89%;
+}
+
+.cadastro {
+  margin: auto;
+}
+
+.ddd2 {
+  width: 90px;
+}
+
+.telefone2 {
+  width: 387px;
+}
+
+.cpf {
+  width: 386px;
+}
+
+.telefone {
+  width: 279px;
+}
+
+.singin {
+  width: 75px;
+  margin-left: 125px;
+}
+
+.interna {
+  width: 300px;
+}
+
+.ddd2 {
+  width: 80px;
+}
+
+.telefone2 {
+  width: 278px;
+}
+
+.cpf2, .Email, .Nome {
+  width: 100%;
+}
+
+.Data {
+  width: 30%;
+}
+
+.cadastrotoken {
+    padding: 550px 10px 10px 10px;
+}
+
+.inputtoken {
+  width: 100%;
+}
+
+}
+
+@media screen and (min-width : 768px) and (max-width : 1024px) {
+
+.formcadastro {
+  margin: 360px 150px 0 150px;
+  position: absolute;
+  height: 50px;
+  width: 40vw;
+}
+
+.cadastro {
+  margin: auto;
+}
+
+.ddd2 {
+  width: 90px;
+}
+
+.telefone2 {
+  width: 366px;
+}
+
+.cpf {
+  width: 496px;
+}
+
+.telefone {
+  width: 389px;
+}
+
+.singin {
+  width: 75px;
+  margin-left: 235px;
+}
+
+.cpf2, .Email, .Nome {
+  width: 100%;
+}
+
+.Data {
+  width: 30%;
+}
+
+.cadastrotoken {
+    padding: 150px 10px 10px 180px;
+}
+
+.inputtoken {
+  width: 490px;
+}
+
+}
+
+@media screen  and (min-width : 1224px) {
+
+.formcadastro {
+  margin: 0 auto;
+  padding-top: 25%;
+  height: 50px;
+  width: 490px;
+}
+
+.cadastro {
+  margin: auto;
+}
+
+.inputtoken {
+  width: 490px;
+}
+
+.ddd2 {
+  width: 23%;
+}
+
+.telefone2 {
+  width: 75%;
+}
+
+.telefone {
+  width: 392px;
+}
+
+.singin {
+  width: 75px;
+  margin-left: 240px;
+}
+
+}
