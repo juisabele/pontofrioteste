@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="css/style.css" rel="stylesheet" type="text/css">
 </head>
   <body>
@@ -10,12 +11,15 @@
           <fieldset>
 
             <p><img class="logosize" src="img/logo.png"></p>
-            <p><input class="cpf" type="text" value="CPF" placeholder="CPF"></p>
+            <p><input class="cpf" type="text" value="CPF" placeholder="CPF" pattern="\d{1,}"
+              oninvalid="setCustomValidity('Por favor, preencha CPF válido')"></p>
             <p>
               <div class="flexData">
-                <input class="ddd" type="text" value="DDD" placeholder="DDD">
-            <input class="telefone" type="text" value="Celular" placeholder="Celular"></div></p>
-            <p><input class="create" type="submit" value="Crie sua conta">
+                <input class="ddd" type="text" value="DDD" placeholder="DDD" pattern="\d{3}"
+                oninvalid="setCustomValidity('Por favor, preencha DDD válido')">
+            <input class="telefone" type="text" value="Celular" placeholder="Celular" pattern="\d{8,9}"
+            oninvalid="setCustomValidity('Por favor, preencha um número de celular válido')"></div></p>
+            <p><a href="cadastro.html">Crie sua conta</a>
            <input class="singin" type="submit" value="Entrar"></p>
 
           </fieldset>

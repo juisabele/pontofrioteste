@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet">
   <link href="css/style.css" rel="stylesheet" type="text/css">
 </head>
@@ -10,22 +11,29 @@
       <fieldset>
 
         <p><img class="logosize" src="img/logo.png"></p>
-        <p><input class="Nome" type="text" placeholder="Nome Completo" pattern="[a-zA-ZáéíóúàâêôãõüçÁÉÍÓÚÀÂÊÔÃÕÜÇ]{3,}\s{1,}[a-zA-ZáéíóúàâêôãõüçÁÉÍÓÚÀÂÊÔÃÕÜÇ\s]{1,}"><p>
+        <p><input class="Nome" type="text" placeholder="Nome Completo" pattern="[a-zA-ZáéíóúàâêôãõüçÁÉÍÓÚÀÂÊÔÃÕÜÇ]{3,}\s{1,}[a-zA-ZáéíóúàâêôãõüçÁÉÍÓÚÀÂÊÔÃÕÜÇ\s]{1,}"
+          oninvalid="setCustomValidity('Por favor, preencha seu nome e sobrenome')"><p>
         <p><input class="Email" type="email" placeholder="Email" ></p>
         <p>
           <div class="flexData">
-          <input class="Data" type="text" placeholder="Dia"></input>
+          <input class="Data" type="text" placeholder="Dia" pattern="\d{1}"
+          oninvalid="setCustomValidity('Por favor, preencha um dia válido')"></input>
           <span class="Barra">/</span>
-          <input class="Data" type="text" placeholder="Mês"></input>
+          <input class="Data" type="text" placeholder="Mês" pattern="\d{2}"
+          oninvalid="setCustomValidity('Por favor, preencha um mês válido')"></input>
           <span class="Barra">/</span>
-          <input class="Data" type="text" placeholder="Ano"></input>
+          <input class="Data" type="text" placeholder="Ano" pattern="\d{4}"
+          oninvalid="setCustomValidity('Por favor, preencha um ano válido')"></input>
         </div>
         </p>
-        <p><input class="cpf2" type="text" placeholder="CPF" ><p>
+        <p><input class="cpf2" type="text" placeholder="CPF" pattern="\d{1,}"
+          oninvalid="setCustomValidity('Por favor, preencha CPF válido')"><p>
         <p>
           <div class="flexData">
-            <input class="ddd2" type="text" placeholder="DDD" pattern="\d{3}">
-        <input class="telefone2" type="text" placeholder="Celular" pattern="\d{8,9}">
+            <input class="ddd2" type="text" placeholder="DDD" pattern="\d{3}"
+            oninvalid="setCustomValidity('Por favor, preencha DDD válido')">
+        <input class="telefone2" type="text" placeholder="Celular" pattern="\d{8,9}"
+        oninvalid="setCustomValidity('Por favor, preencha número de celular válido')">
         </div>
         </p>
         <p><div class="flexData">
