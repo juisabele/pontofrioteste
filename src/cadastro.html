@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
+  <body>
+    <form id="msform" method="post">
+
+      <fieldset>
+
+        <p><img class="logosize" src="img/logo.png"></p>
+        <p><input class="Nome" type="text" placeholder="Nome Completo" pattern="[a-zA-ZáéíóúàâêôãõüçÁÉÍÓÚÀÂÊÔÃÕÜÇ]{3,}\s{1,}[a-zA-ZáéíóúàâêôãõüçÁÉÍÓÚÀÂÊÔÃÕÜÇ\s]{1,}"><p>
+        <p><input class="Email" type="email" placeholder="Email" ></p>
+        <p>
+          <div class="flexData">
+          <input class="Data" type="text" placeholder="Dia"></input>
+          <span class="Barra">/</span>
+          <input class="Data" type="text" placeholder="Mês"></input>
+          <span class="Barra">/</span>
+          <input class="Data" type="text" placeholder="Ano"></input>
+        </div>
+        </p>
+        <p><input class="cpf2" type="text" placeholder="CPF" ><p>
+        <p>
+          <div class="flexData">
+            <input class="ddd2" type="text" placeholder="DDD" pattern="\d{3}">
+        <input class="telefone2" type="text" placeholder="Celular" pattern="\d{8,9}">
+        </div>
+        </p>
+        <p><div class="flexData">
+          <a href="index.html">Voltar</a>
+          <input class="create" type="submit" value="Cadastrar">
+        </div>
+          <p>
+
+      </fieldset>
+
+    </form>
+<script src="js/validatecpf.js"></script>
+</body>
+<html>
