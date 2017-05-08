@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
   <link href="css/style.css" rel="stylesheet" type="text/css">
 </head>
   <body>
@@ -16,8 +16,9 @@
         <p><input class="Email" type="email" placeholder="Email" ></p>
         <p>
           <div class="flexData">
-          <input class="Data" type="text" placeholder="Dia" pattern="\d{1}"
-          oninvalid="setCustomValidity('Por favor, preencha um dia válido')"></input>
+          <input class="Data" type="text" placeholder="Dia" pattern="\d{1,}"
+          oninvalid="setCustomValidity('Por favor, preencha um dia válido')">
+          <span><i class="fa fa-close" aria-hidden="true"></i></span></input>
           <span class="Barra">/</span>
           <input class="Data" type="text" placeholder="Mês" pattern="\d{2}"
           oninvalid="setCustomValidity('Por favor, preencha um mês válido')"></input>
@@ -30,7 +31,7 @@
           oninvalid="setCustomValidity('Por favor, preencha CPF válido')"><p>
         <p>
           <div class="flexData">
-            <input class="ddd2" type="text" placeholder="DDD" pattern="\d{3}"
+            <input class="ddd2" type="text" placeholder="DDD" pattern="\d{2,3}"
             oninvalid="setCustomValidity('Por favor, preencha DDD válido')">
         <input class="telefone2" type="text" placeholder="Celular" pattern="\d{8,9}"
         oninvalid="setCustomValidity('Por favor, preencha número de celular válido')">
