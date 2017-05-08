@@ -176,6 +176,9 @@ div .tokenfield {
 }
 
 @media (min-width: 320px) and (max-width: 360px) {
+  body {
+    background: url("../img/bgmobile.png") no-repeat center center fixed;
+  }
   .logosize {
     max-width: 200px;
   }
@@ -207,6 +210,9 @@ div .tokenfield {
 }
 
 @media (min-width: 360px) and (max-width: 768px) {
+  body {
+    background: url("../img/bgmobile.png") no-repeat center center fixed;
+  }
   .logosize {
     max-width: 300px;
   }
