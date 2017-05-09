@@ -1,23 +1,4 @@
-<head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" >
-<link href="css/style.css" rel="stylesheet" type="text/css">
-</head>
-<body>
-
-  <form>
-  <img class="logosize" src="img/logo.png">
-  <div class="group">
-    <input type="text"><span class="highlight"></span><span class="bar"></span>
-    <label>Insira seu token</label>
-  </div>
-  <button type="button" class="button buttonBlue token">Validar
-    <div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
-  </button>
-</form>
-
-<script src="js/validatecpf.js"></script>
-<script>$(window, document, undefined).ready(function() {
+$(window, document, undefined).ready(function() {
 
   $('input').blur(function() {
     var $this = $(this);
@@ -52,6 +33,3 @@
   });
 
 });
-</script>
-</body>
-<html>
