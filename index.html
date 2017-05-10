@@ -7,19 +7,19 @@
 </head>
   <body>
 
-  <form>
+  <form method="POST" id="formulario">
     <img class="logosize" src="img/logo.png">
-    <p class="error" aria-live="polite"></p>
+    <h3 id="erros" style="display:none"></h3>
     <div class="group">
-      <input class="used" type="text" id="cpf"><span class="highlight"></span><span class="bar"></span>
-      <label>CPF</label>
+      <input class="used" type="text" id="cpf">
+      <label>CPF (somente números)</label>
     </div>
 
     <p class="error" aria-live="polite"></p>
 
     <div class="group">
-      <input class="used" type="text" id="celular"><span class="highlight"></span><span class="bar"></span>
-      <label>Celular (com DDD)</label>
+      <input class="used" type="text" id="celular" onkeypress="mascaraCelular(this, event)">
+      <label>Celular (com DDD, somente números)</label>
     </div>
 
     <button type="submit" class="button buttonBlue entrar">Entrar
@@ -28,7 +28,8 @@
     <a href="cadastro.html">Criar conta</a>
   </form>
 
-  <script src="js/validacoes.js"></script>
+  <script src="js/validacoescadastro.js"></script>
   <script src="js/buttoneffect.js"></script>
+  <script src="js/mascaradata.js"></script>
   </body>
   <html>

@@ -15,7 +15,7 @@ while ((errorData = errorData.nextSibling).nodeType != 1);
 while ((errorEmail = errorEmail.nextSibling).nodeType != 1);
 while ((errorCelular = errorCelular.nextSibling).nodeType != 1);
 var cpfRegExp = /([0-9]{2}[\.]?[0-9]{3}[\.]?[0-9]{3}[\/]?[0-9]{4}[-]?[0-9]{2})|([0-9]{3}[\.]?[0-9]{3}[\.]?[0-9]{3}[-]?[0-9]{2})/;
-var celularRegExp = /\d{10,12}/;
+var celularRegExp = /\(\d{2,3}\)\d{8,9}/;
 var nomeRegExp = /[a-zA-ZáéíóúàâêôãõüçÁÉÍÓÚÀÂÊÔÃÕÜÇ]{3,}\s{1,}[a-zA-ZáéíóúàâêôãõüçÁÉÍÓÚÀÂÊÔÃÕÜÇ\s]{1,}/;
 var dataRegExp = /^(\d{1,2})\/(\d{1,2})\/(\d{4})$/;
 var emailRegExp = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
@@ -34,15 +34,15 @@ element["on"+event] = function (e) {
 
 addEvent(window, "load", function () {
 var testCpf = cpf.value.length === 0 || cpfRegExp.test(cpf.value);
-var testNome = nome.value.length === 0 || celularRegExp.test(celular.value);
-var testData = data.value.length === 0 || nomeRegExp.test(nome.value);
-var testEmail = email.value.length === 0 || dataRegExp.test(data.value);
-var testCelular = celular.value.length === 0 || emailRegExp.test(email.value);
+var testNome = nome.value.length === 0 || nomeRegExp.test(celular.value);
+var testData = data.value.length === 0 || dataRegExp.test(nome.value);
+var testEmail = email.value.length === 0 || emailRegExp.test(data.value);
+var testCelular = celular.value.length === 0 || celularRegExp.test(email.value);
 
 cpf.className = testCpf ? "valid" : "invalid";
-data.className = testCpf ? "valid" : "invalid";
-email.className = testCpf ? "valid" : "invalid";
-celular.className = testCpf ? "valid" : "invalid";
+data.className = testData ? "valid" : "invalid";
+email.className = testEmail ? "valid" : "invalid";
+celular.className = testCelular ? "valid" : "invalid";
 });
 addEvent(cpf, "keyup", function () {
 var test = cpf.value.length === 0 || cpfRegExp.test(cpf.value);
@@ -108,7 +108,6 @@ if (!testCpf) {
   console.log('cpf')
 } else {
   cpf.className = "valid";
-  errorCpf.innerHTML = "";
   errorCpf.className = "errorCPF";
 }
 
@@ -119,19 +118,17 @@ if (!testNome) {
   console.log('nome')
 } else {
   nome.className = "valid";
-  errorNome.innerHTML = "";
   errorNome.className = "errorNome";
 }
 
 if (!testEmail) {
-  nome.className = "invalid";
-  errorNome.innerHTML = "Nome inválido";
-  errorNome.className = "errorNome active";
+  email.className = "invalid";
+  errorEmail.innerHTML = "Email inválido";
+  errorEmail.className = "errorEmail active";
   console.log('email')
 } else {
-  nome.className = "valid";
-  errorNome.innerHTML = "";
-  errorNome.className = "errorNome";
+  email.className = "valid";
+  errorEmail.className = "errorEmail";
 }
 
 if (!testCelular) {
@@ -141,7 +138,6 @@ if (!testCelular) {
   console.log('celular')
 } else {
   celular.className = "valid";
-  errorCelular.innerHTML = "";
   errorCelular.className = "errorCelular";
 }
 
@@ -152,7 +148,6 @@ if (!testData) {
   console.log('data')
 } else {
   data.className = "valid";
-  errorData.innerHTML = "";
   errorData.className = "errorData";
 }
 

@@ -13,7 +13,7 @@ body {
 }
 
 input.invalid{
-  background-color: #FDD;
+  background-color: #BC0206;
 }
 
 input:focus.invalid {
@@ -25,70 +25,65 @@ input:focus.invalid {
   width  : 100%;
   padding: 0;
   color: white;
-  border-radius: 0 0 5px 5px;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
 .errorCPF.active {
-  padding: 0.3em;
-  background-color: #fddddd !important;
+  background-color: #BC0206 !important;
+  border-radius: 0 0 5px 5px;
 }
 
 .errorCelular {
   width  : 100%;
   padding: 0;
   color: white;
-  border-radius: 0 0 5px 5px;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
 .errorCelular.active {
-  padding: 0.3em;
-  background-color: #fddddd !important;
+  background-color: #BC0206 !important;
+  border-radius: 0 0 5px 5px;
 }
 
 .errorNome {
   width  : 100%;
   padding: 0;
   color: white;
-  border-radius: 0 0 5px 5px;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
 .errorNome.active {
-  padding: 0.3em;
-  background-color: #fddddd !important;
+  background-color: #BC0206 !important;
+  border-radius: 0 0 5px 5px;
 }
 
 .errorData {
   width  : 100%;
   padding: 0;
   color: white;
-  border-radius: 0 0 5px 5px;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
 .errorData.active {
-  padding: 0.3em;
-  background-color: #fddddd !important;
+  background-color: #BC0206 !important;
+  border-radius: 0 0 5px 5px;
 }
 
 .errorEmail {
   width  : 100%;
   padding: 0;
   color: white;
-  border-radius: 0 0 5px 5px;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
 .errorEmail.active {
-  padding: 0.3em;
-  background-color: #fddddd !important;
+  background-color: #BC0206 !important;
+  border-radius: 0 0 5px 5px;
 }
 
 #cupom {
