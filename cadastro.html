@@ -10,67 +10,32 @@
 <form>
   <img class="logosize" src="img/logo.png">
   <div class="group">
-    <input type="text"><span class="highlight"></span><span class="bar"></span>
+    <input type="text" id="nome"><span class="highlight"></span><span class="bar"></span>
     <label>Nome completo</label>
   </div>
   <div class="group">
-    <input type="email"><span class="highlight"></span><span class="bar"></span>
+    <input type="text" id="email"><span class="highlight"></span><span class="bar"></span>
     <label>Email</label>
   </div>
   <div class="group">
-    <input type="email"><span class="highlight"></span><span class="bar"></span>
+    <input type="text" id="cpf"><span class="highlight"></span><span class="bar"></span>
     <label>CPF</label>
   </div>
   <div class="group">
-    <input type="text"><span class="highlight"></span><span class="bar"></span>
+    <input type="text" id="celular"><span class="highlight"></span><span class="bar"></span>
     <label>Celular (com DDD)</label>
   </div>
   <div class="group">
-    <input type="text"><span class="highlight"></span><span class="bar"></span>
+    <input type="text" id="data"><span class="highlight"></span><span class="bar"></span>
     <label>Data de nascimento</label>
   </div>
-  <button type="button" class="button buttonBlue">Cadastrar
+  <button type="submit" class="button buttonBlue">Cadastrar
     <div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
   </button>
   <a href="index.html">Voltar</a>
 </form>
 
-<script src="js/validatecpf.js"></script>
-<script>$(window, document, undefined).ready(function() {
-
-  $('input').blur(function() {
-    var $this = $(this);
-    if ($this.val())
-      $this.addClass('used');
-    else
-      $this.removeClass('used');
-  });
-
-  var $ripples = $('.ripples');
-
-  $ripples.on('click.Ripples', function(e) {
-
-    var $this = $(this);
-    var $offset = $this.parent().offset();
-    var $circle = $this.find('.ripplesCircle');
-
-    var x = e.pageX - $offset.left;
-    var y = e.pageY - $offset.top;
-
-    $circle.css({
-      top: y + 'px',
-      left: x + 'px'
-    });
-
-    $this.addClass('is-active');
-
-  });
-
-  $ripples.on('animationend webkitAnimationEnd mozAnimationEnd oanimationend MSAnimationEnd', function(e) {
-  	$(this).removeClass('is-active');
-  });
-
-});
-</script>
+<script src="js/validacoes.js"></script>
+<script src="js/buttoneffect.js"></script>
 </body>
 <html>
