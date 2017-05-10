@@ -37,11 +37,3 @@ function mascaraCelular( campo, e )
             campo.value = data;
     }
 }
-
-var form = document.getElementById('formulario');
-
-form.addEventListener('submit', function(e){
-    var valorMascara =  document.getElementById('celular')
-    //document.getElementById("saida").value = valorMascara.value.replace("(","").replace(")","");
-    console.log(valorMascara.value.replace("(","").replace(")",""))
-})

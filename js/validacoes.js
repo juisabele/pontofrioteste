@@ -14,7 +14,7 @@ while ((errorNome = errorNome.nextSibling).nodeType != 1);
 while ((errorData = errorData.nextSibling).nodeType != 1);
 while ((errorEmail = errorEmail.nextSibling).nodeType != 1);
 while ((errorCelular = errorCelular.nextSibling).nodeType != 1);
-var cpfRegExp = /([0-9]{2}[\.]?[0-9]{3}[\.]?[0-9]{3}[\/]?[0-9]{4}[-]?[0-9]{2})|([0-9]{3}[\.]?[0-9]{3}[\.]?[0-9]{3}[-]?[0-9]{2})/;
+var cpfRegExp = /\d{11}/;
 var celularRegExp = /\(\d{2,3}\)\d{8,9}/;
 var nomeRegExp = /[a-zA-ZáéíóúàâêôãõüçÁÉÍÓÚÀÂÊÔÃÕÜÇ]{3,}\s{1,}[a-zA-ZáéíóúàâêôãõüçÁÉÍÓÚÀÂÊÔÃÕÜÇ\s]{1,}/;
 var dataRegExp = /^(\d{1,2})\/(\d{1,2})\/(\d{4})$/;
@@ -94,7 +94,7 @@ if (test) {
   data.className = "invalid";
 }
 });
-addEvent(form, "submit", function () {
+addEvent(form, "submit", function (e) {
 var testCpf = cpf.value.length === 0 || cpfRegExp.test(cpf.value);
 var testNome = nome.value.length === 0 || nomeRegExp.test(nome.value);
 var testEmail = email.value.length === 0 || nomeRegExp.test(nome.value);
@@ -105,16 +105,26 @@ if (!testCpf) {
   cpf.className = "invalid";
   errorCpf.innerHTML = "CPF inválido";
   errorCpf.className = "errorCPF active";
+  e.preventDefault();
   console.log('cpf')
 } else {
-  cpf.className = "valid";
-  errorCpf.className = "errorCPF";
+  if (TestaCPF(cpf.value)){
+    cpf.className = "valid";
+    errorCpf.className = "errorCPF";
+  }
+  else {
+    cpf.className = "invalid";
+    errorCpf.innerHTML = "CPF inválido";
+    errorCpf.className = "errorCPF active";
+    e.preventDefault();
+  };
 }
 
 if (!testNome) {
   nome.className = "invalid";
   errorNome.innerHTML = "Nome inválido";
   errorNome.className = "errorNome active";
+  e.preventDefault();
   console.log('nome')
 } else {
   nome.className = "valid";
@@ -125,6 +135,7 @@ if (!testEmail) {
   email.className = "invalid";
   errorEmail.innerHTML = "Email inválido";
   errorEmail.className = "errorEmail active";
+  e.preventDefault();
   console.log('email')
 } else {
   email.className = "valid";
@@ -135,6 +146,7 @@ if (!testCelular) {
   celular.className = "invalid";
   errorCelular.innerHTML = "Celular inválido";
   errorCelular.className = "errorCelular active";
+  e.preventDefault();
   console.log('celular')
 } else {
   celular.className = "valid";
@@ -145,11 +157,36 @@ if (!testData) {
   data.className = "invalid";
   errorData.innerHTML = "Data inválida";
   errorData.className = "errorData active";
+  e.preventDefault();
   console.log('data')
 } else {
   data.className = "valid";
   errorData.className = "errorData";
 }
 
-return false;
+if (testData && testCelular && testEmail && testCpf && testNome){
+  celular.value = celular.value.replace("(","").replace(")","")
+  data.value = data.value.replace("/","").replace("/","")
+}
 });
+
+function TestaCPF(strCPF) {
+    var Soma;
+    var Resto;
+    Soma = 0;
+	if (strCPF == "00000000000") return false;
+
+	for (i=1; i<=9; i++) Soma = Soma + parseInt(strCPF.substring(i-1, i)) * (11 - i);
+	Resto = (Soma * 10) % 11;
+
+    if ((Resto == 10) || (Resto == 11))  Resto = 0;
+    if (Resto != parseInt(strCPF.substring(9, 10)) ) return false;
+
+	Soma = 0;
+    for (i = 1; i <= 10; i++) Soma = Soma + parseInt(strCPF.substring(i-1, i)) * (12 - i);
+    Resto = (Soma * 10) % 11;
+
+    if ((Resto == 10) || (Resto == 11))  Resto = 0;
+    if (Resto != parseInt(strCPF.substring(10, 11) ) ) return false;
+    return true;
+}
