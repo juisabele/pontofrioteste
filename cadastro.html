@@ -10,7 +10,6 @@
 <form method="POST" id="cadastro">
 
   <img class="logosize" src="img/logo.png">
-  <h3 id="erros" style="display:none"></h3>
   <div class="group">
     <input type="text" id="nome" name="nome">
     <label>Nome completo</label>
@@ -31,6 +30,7 @@
     <input type="tel" id="data" name="data" onkeypress="mascaraData(this, event)" placeholder="dd/mm/yyyy"  class="masked">
     <label>Data de nascimento</label>
   </div>
+  <h3 id="erros" style="display:none"></h3>
   <button type="submit" class="button buttonBlue">Cadastrar
     <div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
   </button>
