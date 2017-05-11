@@ -10,18 +10,17 @@ window.onload = function onload(){
   /* localiza todo os forms e hrefs e adiciona a querystring (removendo errors) aos seus apontamentos */
   var qs = window.location.search.replace(/(&?errors=[\w\%]*)/i,'');
   Array.prototype.slice.call(document.getElementsByTagName('a')).forEach(function(a){a.href += qs});
-  (document.getElementsByTagName('form#login')||{}).action = [captive_api, 'login', qs].join('');
-  (document.getElementsByTagName('form#cadastro')||{}).action = [captive_api, 'enroll', qs].join('');
-  (document.getElementsByTagName('form#auth')||{}).action = [token_url, qs].join('');
-  (document.getElementsByTagName('input#username')||{}).value = client_mac;
-  console.log(qs)
+  (document.querySelector('form#login')||{}).action = [captive_api, 'login', qs].join('');
+  (document.querySelector('form#cadastro')||{}).action = [captive_api, 'enroll', qs].join('');
+  (document.querySelector('form#auth')||{}).action = [token_url, qs].join('');
+  (document.querySelector('input#username')||{}).value = client_mac;
 
 
   /* exibe erros recebidos via querystring */
   var el = document.getElementById('erros');
   if(el){
     var errors =  [];
-    var regex  = /errors=([\w\%]*)/gim;
+    var regex  = /(?:errors|error_message)=([\w\%]*)/gim;
     var match = regex.exec(window.location.search)
     while( match != null){
       errors.push(match[1])
