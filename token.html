@@ -5,10 +5,10 @@
 </head>
 <body>
 
-  <form>
+  <form id="auth">
   <img class="logosize" src="img/logo.png">
   <div class="group">
-    <input type="hidden" name="username" value="macadress">
+    <input type="hidden" name="username" id="username">
     <input type="text" name="password"><span class="highlight"></span><span class="bar"></span>
     <label>Insira seu token</label>
   </div>
@@ -17,42 +17,8 @@
   </button>
 </form>
 
+<script src="js/script.js"></script>
 <script src="js/validatecpf.js"></script>
-<script>$(window, document, undefined).ready(function() {
-
-  $('input').blur(function() {
-    var $this = $(this);
-    if ($this.val())
-      $this.addClass('used');
-    else
-      $this.removeClass('used');
-  });
-
-  var $ripples = $('.ripples');
-
-  $ripples.on('click.Ripples', function(e) {
-
-    var $this = $(this);
-    var $offset = $this.parent().offset();
-    var $circle = $this.find('.ripplesCircle');
-
-    var x = e.pageX - $offset.left;
-    var y = e.pageY - $offset.top;
-
-    $circle.css({
-      top: y + 'px',
-      left: x + 'px'
-    });
-
-    $this.addClass('is-active');
-
-  });
-
-  $ripples.on('animationend webkitAnimationEnd mozAnimationEnd oanimationend MSAnimationEnd', function(e) {
-    $(this).removeClass('is-active');
-  });
-
-});
-</script>
+<script src="js/buttoneffect.js"></script>
 </body>
 <html>

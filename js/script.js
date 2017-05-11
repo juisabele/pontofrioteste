@@ -14,6 +14,7 @@ window.onload = function onload(){
   (document.getElementsByTagName('form#cadastro')||{}).action = [captive_api, 'enroll', qs].join('');
   (document.getElementsByTagName('form#auth')||{}).action = [token_url, qs].join('');
   (document.getElementsByTagName('input#username')||{}).value = client_mac;
+  console.log(qs)
 
 
   /* exibe erros recebidos via querystring */
